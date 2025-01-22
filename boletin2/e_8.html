@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <form action="e_8.php" method="post">
+      Nombre <input type="text" id="nombre" name="nombre" /> <br />
+
+      Apellidos <input type="text" id="apellidos" name="apellidos" /><br />
+
+      Sexo
+      <input type="radio" name="sexo" id="hombre" value="Hombre" checked />
+      Hombre <input type="radio" name="sexo" id="mujer" value="Mujer" />Mujer
+      <br />
+
+      Correo electronico <input type="text" name="correo" id="correo" /><br />
+
+      Numero de contacto
+      <input type="text" id="contacto" name="contacto" /><br />
+
+      Experiencia laboral
+      <textarea id="experiencia" name="experiencia"></textarea><br />
+
+      Estudios <textarea id="estudios" name="estudios"></textarea><br />
+
+      Jornada laboral
+      <select name="jornada" id="jornada" name="jornada">
+        <option value="Mañana">Mañana</option>
+        <option value="Tarde">Tarde</option>
+        <option value="Indiferente">Indiferente</option></select
+      ><br />
+      Idiomas <input type="checkbox" name="idioma[]" value="Ingles" />Ingles
+      <input type="checkbox" name="idioma[]" value="Frances" /> Frances<input
+        type="checkbox"
+        name="idioma[]"
+        value="Aleman"
+      />Aleman<input type="checkbox" name="idioma[]" value="Otros" />Otros
+      <br />
+
+      <input type="submit" value="Enviar" />
+      <button type="reset">Limpiar</button>
+    </form>
+  </body>
+</html>

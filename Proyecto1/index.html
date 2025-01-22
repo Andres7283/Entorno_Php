@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Proyecto cerveza</title>
+  </head>
+  <body>
+    <h1>Inserción de Cervezas</h1>
+    <p>Introduzca los datos de las Cevezas:</p>
+    <div class="contenedor">
+      <div style="margin: 1%">
+        <form action="index.php">
+          <label for="cervezaSelect" class="m">Tipo de Cerveza:</label>
+          <select name="tipoCerveza" id="cevezaSelect">
+            <option value="lager">Lager</option>
+            <option value="paleLager">Pale Lager</option>
+            <option value="marzen">Marzen</option>
+            <option value="block">Block</option>
+            <option value="americanLager">American Lager</option>
+            <option value="ale">Ale</option>
+            <option value="paleAle">Pale Ale</option>
+            <option value="iPA">IPA</option>
+            <option value="bitter">Bitter</option>
+            <option value="brownAle">Brown Ale</option>
+            <option value="poter">Poter</option>
+            <option value="stout">Stout</option>
+            <option value="trapenses">Trapenses</option>
+            <option value="abadia">Abadia</option>
+            <option value="weisbier">Weisbier</option>
+            <option value="witbier">Witbier</option>
+          </select>
+
+          <br />
+          <br />
+
+          <label for="" class="m">Denominación del alimento: </label>
+          <select name="denominacionAlimento" id="denominacionAlimentoSelect">
+            <option value="botellin">Botellín</option>
+            <option value="tercio">Tercio</option>
+            <option value="medioLitro">Medio Litro</option>
+            <option value="unLitro">1 Litro</option>
+            <option value="lata">Lata</option>
+          </select>
+          <br />
+          <br />
+
+          <label for="" class="m">Tipo de Embase:</label>
+          <input
+            checked
+            type="radio"
+            id="botellin"
+            name="embase"
+            value="boltellin"
+          />
+          <label for="botellin">Botellin</label>
+          <input type="radio" id="tercio" name="embase" value="tercio" />
+          <label for="tercio">Tercio</label>
+          <input
+            type="radio"
+            id="medioLitro"
+            name="embase"
+            value="medioLitro"
+          />
+          <label for="medioLitro">1/2 Litro</label>
+          <input type="radio" id="Litro" name="embase" value="Litro" />
+          <label for="Litro">1 Litro</label>
+          <input type="radio" id="lata" name="embase" value="lata" />
+          <label for="lata">Lata</label>
+
+          <br />
+          <br />
+
+          <label for="" class="m">Cantidad neta: </label>
+          <select name="cantidadNeta" id="cantidadNeta">
+            <option checked value="25cl">25cl</option>
+            <option value="33cl">33cl</option>
+            <option value="1Litro">1 Litro</option>
+            <option value="medioLitro">1/2 Litro</option>
+            <option value="Barril">Barril 25</option>
+          </select>
+
+          <br />
+          <br />
+
+          <label for="marca">Marca del producto:</label>
+          <input type="text" name="marca" id="marca" />
+
+          <br />
+          <br />
+
+          <label for=""
+            >Advertencia sobre el abuso en el consumo de alcohol:</label
+          >
+          <input type="text" name="advertencia" id="advertencia" />
+
+          <br />
+          <br />
+
+          <label for="">Fecha consumo preferente:</label>
+          <input type="date" name="fecha" id="fecha" />
+
+          <br />
+          <br />
+
+          <label for="">Indicador sustancias que pueden causar alergias:</label>
+          <input
+            type="checkbox"
+            value="gluten"
+            id="gluten"
+            name="alergenos[]"
+          />Gluten
+          <input
+            type="checkbox"
+            value="huevo"
+            id="huevo"
+            name="alergenos[]"
+          />Huevo
+          <input
+            type="checkbox"
+            value="cacahuete"
+            id="cacahuete"
+            name="alergenos[]"
+          />Cacahuete
+          <input
+            type="checkbox"
+            value="soja"
+            id="soja"
+            name="alergenos[]"
+          />Soja
+          <inp
+            ut
+            type="checkbox"
+            value="lacteo"
+            id="lacteo"
+            name="alergenos[]"
+          />Lacteo
+          <input
+            type="checkbox"
+            value="sulfitos"
+            id="sulfitos"
+            name="alergenos[]"
+          />Sulfitos
+          <input
+            type="checkbox"
+            value="frutosCascara"
+            id="frutosCascara"
+            name="alergenos[]"
+          />Frutos con cascara
+          <input
+            type="checkbox"
+            value="sinAlergenos"
+            id="sinAlergenos"
+            name="alergenos[]"
+          />Sin Alergenos
+
+          <br />
+          <br />
+
+          <label for="mensaje">Observaciones:</label>
+          <br />
+          <textarea name="mensaje" id="mensaje"></textarea>
+          <br />
+          <input type="submit" name="Insertar cerveza" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

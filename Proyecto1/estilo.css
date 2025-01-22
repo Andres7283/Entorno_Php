@@ -1,0 +1,7 @@
+h1 {
+  color: rgb(92, 92, 219);
+}
+.contenedor {
+  border: solid 1px black;
+  display: grid 10;
+}
