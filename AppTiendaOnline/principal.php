@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>APP Tienda Online</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Principalº</title>
   </head>
-  <body>
-    <h1>Inserción de Cervezas</h1>
+  <body class="principal">
+    <div>
+    <h1 style="color: #00C6B2">Inserción de Cervezas</h1>
     <p>Introduzca los datos de la la cerveza:</p>
     <br />
 
@@ -41,15 +43,15 @@
       <br /><br />
   
       <label for=""><b>TIPO CERVEZA:</b></label>
-      <input type="radio" name="tipo" value="1"/>
+      <input type="radio" name="tipo" value="Larger" checked/>
       <label for="">LAGER</label>
-      <input type="radio" name="tipo" value="2"/>
+      <input type="radio" name="tipo" value="Pale Ale"/>
       <label for="">PALE ALE</label>
-      <input type="radio" name="tipo" value="3"/>
+      <input type="radio" name="tipo" value="Cerveza Negra"/>
       <label for="">CERVEZA NEGRA</label>
-      <input type="radio" name="tipo" value="4"/>
+      <input type="radio" name="tipo" value="Abadia"/>
       <label for="">ABADIA</label>
-      <input type="radio" name="tipo" value="5"/>
+      <input type="radio" name="tipo" value="Rubia"/>
       <label for="">RUBIA</label>
       <?php
         if (empty($_REQUEST["tipo"])) {
@@ -78,22 +80,22 @@
       <br /><br />
 
       <label for=""><b>ALÉRGENOS:</b></label>
-      <input type="checkbox" name="alergia"/>
+      <input type="checkbox" name="alergia[]" value="Gluten"/>
       <label for="">Gluten</label>
-      <input type="checkbox" name="alergia"/>
+      <input type="checkbox" name="alergia[]" value="Huevo"/>
       <label for="">Huevo</label>
-      <input type="checkbox" name="alergia"/>
+      <input type="checkbox" name="alergia[]" value="Cacahuete"/>
       <label for="">Cacahuete</label>
-      <input type="checkbox" name="alergia"/>
+      <input type="checkbox" name="alergia[]" value="Soja"/>
       <label for="">Soja</label>
-      <input type="checkbox" name="alergia"/>
+      <input type="checkbox" name="alergia[]" value="Lacteo"/>
       <label for="">Lacteo</label>
-      <input type="checkbox" name="alergia"/>
+      <input type="checkbox" name="alergia[]" value="Sulfitos"/>
       <label for="">Sulfitos</label>
-      <input type="checkbox" name="alergia" />
+      <input type="checkbox" name="alergia[]" value="Sin Alérgenos"/>
       <label for="">Sin Alérgenos</label>
       <?php
-        if (empty($_REQUEST["tipo"])) {
+          if (empty($_REQUEST["tipo"])) {
          ?><p style="color: red;">¡Has de elegir Alérgenos! </p>
          <?php
         } 
@@ -118,19 +120,40 @@
       <label for=""><b>PRECIO:</b></label>
       <input type="text" name="precio"/> € 
       <?php
+      error_reporting(0);
+        echo $_REQUEST["precio"];
         if (empty($_REQUEST["precio"]) && !is_numeric($_REQUEST["precio"])) {
-          ?><p style="color: red;">¡Ha de tener una fecha de consumo máxima! </p>
+          ?><p style="color: red;">¡El precio debe ser un valor numérico! </p>
           <?php
         } 
       ?>
       <br />
 
-      <label name="observaciones"><b>OBSERVACIONES:</b></label>
+      <label><b>OBSERVACIONES:</b></label>
       <br />
-      <textarea name="" id=""></textarea>
+      <textarea name="observaciones"></textarea>
       <br /><br />
 
       <button id="boton">Insertar Cerveza</button>
     </form>
+    </div>
   </body>
 </html>
+
+
+
+
+<!-- CREATE TABLE 'productos' (
+  'id' int(3) NOT NULL,
+  'Denominacion_Cerveza' varchar(100) NOT NULL,
+  `Marca` varchar(50) NOT NULL,
+  `Tipo_Cerveza` varchar(50) NOT NULL,
+  `Formato` varchar(100) NOT NULL,
+  `Tamano` int(3) NOT NULL,
+  `Alergenos` varchar(40) NOT NULL,
+  `Fecha_Consumo` date NOT NULL,
+  `Foto` varchar(255) NOT NULL,
+  `Precio` int(9) NOT NULL,
+  `Observaciones` text NOT NULL 
+)-->
+

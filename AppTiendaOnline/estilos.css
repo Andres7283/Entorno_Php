@@ -1,0 +1,43 @@
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fbb317b7;
+  text-align: left;
+}
+.index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fbb317b7;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fbb317b7;
+  text-align: left;
+  height: 80vh;
+}
+
+.login input {
+  width: 200px;
+  height: 30px;
+}
+.contenedorLogin {
+  border: solid 5px aliceblue;
+  padding: 0% 5% 2% 5%;
+}
+.login .boton {
+  text-align: center;
+  margin-top: 15%;
+  width: auto;
+}
+.divBoton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

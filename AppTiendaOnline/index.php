@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inserción de Cervezas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Index</title>
 </head>
-<body>
-    <h1 style="color: blue;">Inserción de Cervezas</h1>
+<body class="index">
+    <h1 style="color:blue">Inserción de Cervezas</h1>
     <p>Estos son los datos introducidos:</p>
     <ul>
         <li>DENOMINACIÓN CERVEZA: 
@@ -41,7 +42,9 @@
         <li>
             ALÉRGENOS:
             <?php
-            echo $_REQUEST["alergia"];
+            foreach ($_REQUEST["alergia"] as $alergia) {
+                echo $alergia . ", ";
+            }
             ?>
         </li>
         <li>
@@ -69,6 +72,8 @@
             ?>
         </li>
     </ul>
+
+    <p>[ <a href="principal.php" name="inserccion">Insertar otra cerveza</a> ]</p>
 
 </body>
 </html>
