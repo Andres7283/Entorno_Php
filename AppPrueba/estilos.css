@@ -1,0 +1,205 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 3%;
+}
+
+h1,
+h2 {
+  font-family: "Arial", sans-serif;
+  color: #d35400;
+  margin-bottom: 20px;
+}
+
+/* Encabezado */
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+header nav a:hover {
+  color: #f39c12;
+}
+
+/* Estilos para formularios */
+form {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input[type="file"] {
+  padding: 5px;
+}
+
+form button {
+  background-color: #d35400;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+form button:hover {
+  background-color: #e67e22;
+}
+
+/* Estilos para las listas de cervezas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li button {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: #2ecc71;
+}
+
+/* Carrito */
+#carrito {
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#carrito h3 {
+  margin-bottom: 20px;
+}
+
+#carrito ul {
+  padding-left: 20px;
+}
+
+#carrito ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Mensajes de error */
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+/* Estilo para los enlaces */
+a {
+  color: #d35400;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos específicos para la tienda */
+.store-header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.store-header img {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Estilo para las imágenes de cervezas */
+.cerveza-img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cerveza-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cerveza-item:hover {
+  background-color: #f7f7f7;
+}
+
+/* Estilo para el pie de página */
+footer {
+  text-align: center;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+}
