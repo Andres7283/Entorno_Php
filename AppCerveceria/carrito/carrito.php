@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <?php foreach ($cervezas as $cerveza): ?>
         <li>
             <?php echo $cerveza['nombre']; ?> - <?php echo $cerveza['precio']; ?> €
+            <img src="../uploads/<?php echo $cerveza['foto']; ?>">
             <form method="POST" action="carrito.php">
                 <input type="hidden" name="id_cerveza" value="<?php echo $cerveza['id']; ?>">
                 <button type="submit">Agregar al carrito</button>

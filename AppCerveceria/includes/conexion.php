@@ -1,9 +1,9 @@
 <?php
 // conexion.php
-$host = '127.0.0.1:3308';     // O tu servidor de base de datos
+$host = '127.0.0.1:3308';     // servidor de base de datos
 $dbname = 'cerveceria';  // Nombre de la base de datos
-$username = 'root';      // Tu usuario de MySQL
-$password = 'root';          // Tu contraseña de MySQL (si la tienes)
+$username = 'root';      // Usuario de MySQL
+$password = 'root';          // Contraseña de MySQL
 
 // Conexión a la base de datos usando PDO
 try {
