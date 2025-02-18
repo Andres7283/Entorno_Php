@@ -1,30 +1,37 @@
 <?php
-require 'conexion.php';
 session_start();
+require 'conexion.php';
 
 if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
-    header('Location: index.php');
-    exit;
+    header("Location: index.php");
+    exit();
 }
 
-$stmt = $pdo->query("SELECT usuario FROM usuarios");
+$stmt = $pdo->query("SELECT * FROM usuarios");
 $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración</title>
+    <title>Panel de Admin</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Panel de administración</h1>
-    <h2>Usuarios registrados:</h2>
-    <ul>
+    <h2>Usuarios Registrados</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+        </tr>
         <?php foreach ($usuarios as $user): ?>
-            <li><?php echo htmlspecialchars($user['usuario']); ?></li>
+            <tr>
+                <td><?= $user['id']; ?></td>
+                <td><?= htmlspecialchars($user['usuario']); ?></td> <!-- para que no pueda meter caracteres especiales  -->
+            </tr>
         <?php endforeach; ?>
-    </ul>
-    <p><a href="logout.php">Cerrar sesión</a></p>
+    </table>
+    <a href="logout.php">Cerrar sesión</a>
 </body>
 </html>

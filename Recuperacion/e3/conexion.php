@@ -1,6 +1,6 @@
 <?php
-$host = '127.0.0.1:3308'; // Cambia si tu MySQL usa otro puerto
-$dbname = 'login_basico';
+$host = '127.0.0.1:3308';
+$dbname = 'alumnos';
 $username = 'root';
 $password = 'root';
 
