@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
+$host = "127.0.0.1:3308";
 $dbname = "login_basico";
-$username = "root"; // Cambiar si tienes otro usuario en MySQL
-$password = "";
+$username = "root";
+$password = "root";
 
 // Crear la conexión
 try {
